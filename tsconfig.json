@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "",
+    "baseUrl": ".",
     "paths": {
       "@ui/*": ["common/foundation/resources/client/ui/library/*"],
       "@common/*": ["common/foundation/resources/client/*"],

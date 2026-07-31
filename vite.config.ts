@@ -1,3 +1,4 @@
+import {resolve} from 'node:path';
 import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react-swc';
@@ -12,4 +13,11 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
   ],
+  resolve: {
+    alias: {
+      '@ui': resolve(__dirname, 'common/foundation/resources/client/ui/library'),
+      '@common': resolve(__dirname, 'common/foundation/resources/client'),
+      '@app': resolve(__dirname, 'resources/client'),
+    },
+  },
 });

@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc --skipLibCheck && vite build",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit --skipLibCheck",
     "preview": "vite preview",
     "iconIndex": "node ./scripts/create-icon-index.js",
     "extract": "node ./resources/scripts/extract-translations.js"
