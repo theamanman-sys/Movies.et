@@ -8,6 +8,10 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    # Force HTTPS for the whole site
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
     ##
     ## You may need to uncomment (remove #) the following line for some hosting environments,
     ## if you have installed to a subdirectory, enter the name here also.
